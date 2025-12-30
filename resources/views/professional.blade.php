@@ -195,7 +195,7 @@
                             
                             <div class="bg-gray-50 rounded-2xl p-6 mb-8">
                                 <div class="flex items-start mb-4">
-                                    <input type="checkbox" id="terms" class="mt-1 w-5 h-5 text-orange-600 border-gray-300 rounded focus:ring-orange-500" required>
+                                    <input name="terms" type="checkbox" id="terms" class="mt-1 w-5 h-5 text-orange-600 border-gray-300 rounded focus:ring-orange-500" required>
                                     <label for="terms" class="ml-3 text-sm text-gray-600 leading-relaxed">
                                         I have read and agreed to the Terms of Use and hereby appoint LoanSaathi and its Lending Partners to receive my credit information from credit bureaus. By submitting my details I override my NDNC registration & authorize LoanSaathi and its Lending Partners/representatives to contact me through Call, SMS, Email, Whatsapp or any other mode. You also authorize us to send you promotional offers of financial & non-financial products or services from time to time.
                                     </label>
