@@ -1327,7 +1327,7 @@ Read More
                     <p class="text-gray-600" x-show="!selectedService">Fill in your details below</p>
                 </div>
 
-                <form action="#" method="POST" class="space-y-6">
+                <form action="{{ route('application.phone') }}" method="GET" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Full Name -->
                         <div>

@@ -33,12 +33,18 @@ class ApplicationController extends Controller
     public function personalForm()
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
         return view('presonal', compact('application'));
     }
 
     public function personalSubmit(Request $request)
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
 
 
         $validated = $request->validate([
@@ -82,12 +88,18 @@ class ApplicationController extends Controller
     public function professionalForm()
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
         return view('professional', compact('application'));
     }
 
     public function professionalSubmit(Request $request)
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
 
         $data = $request->validate([
             'company_type' => 'required|string',
@@ -103,12 +115,18 @@ class ApplicationController extends Controller
     public function statementForm()
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
         return view('statement', compact('application'));
     }
 
     public function statementSubmit(Request $request)
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
 
         $data = $request->validate([
             'statement' => 'required|file|mimes:pdf|max:5120',
@@ -124,6 +142,9 @@ class ApplicationController extends Controller
     public function offers()
     {
         $application = $this->getApplicationFromSession();
+        if (! $application) {
+            return redirect()->route('application.phone');
+        }
         return view('offers', compact('application'));
     }
 
@@ -131,9 +152,9 @@ class ApplicationController extends Controller
     {
         $id = session('application_id');
         if (! $id) {
-            return redirect()->route('application.phone');
+            return null;
         }
 
-        return LoanApplication::findOrFail($id);
+        return LoanApplication::find($id);
     }
 }
