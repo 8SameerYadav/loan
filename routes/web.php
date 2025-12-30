@@ -22,3 +22,9 @@ Route::post('/apply/statement', [ApplicationController::class, 'statementSubmit'
 
 Route::get('/apply/offers', [ApplicationController::class, 'offers'])->name('application.offers');
 
+
+// Temporary: accept POST to root and redirect to application start to avoid 405 while forms are fixed
+Route::post('/', function () {
+    return redirect()->route('application.phone');
+});
+
