@@ -183,8 +183,8 @@
                                 </div>
                             </div>
 
-                            <!-- Continue Button -->
-                            <button type="submit" class="w-full gradient-primary text-white py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+                            <!-- Continue Button (advance client-side) -->
+                            <button type="button" @click="step = 2" class="w-full gradient-primary text-white py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
                                 Continue to Next Step
                             </button>
                         </div>
@@ -206,7 +206,7 @@
                                 <button type="button" @click="step = 1" class="w-full border-2 border-orange-600 text-orange-600 py-4 rounded-full font-bold text-lg hover:bg-orange-600 hover:text-white transition-all">
                                     Back
                                 </button>
-                                <button type="button" class="w-full gradient-primary text-white py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+                                <button type="submit" class="w-full gradient-primary text-white py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
                                     Get My Offers
                                 </button>
                             </div>
